@@ -1,0 +1,217 @@
+
+**** 10/29/16 13:42:47 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim"  [ C:\USERS\RADRA\BOX SYNC\SENIOR FALL 2016\ESE 440\Circuit simulation 1\laser sim1-PSpiceFiles\SCHEMAT
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\radra\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_V3 0 5 .1 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LASER SIM1
+D_D5         N08249 0 Dbreak 
+E_U1         N08201 0 VALUE {LIMIT(V(N08143,N08205)*1E6,-15V,+15V)}
+X_M4         N08113 N08201 N08205 RFP50N06/HA
+V_V4         N08113 0 5
+R_R4         N08249 N08205  1 TC=0,0 
+V_V3         N08143 0 0Vdc
+
+**** RESUMING sim.cir ****
+.END
+
+**** 10/29/16 13:42:47 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim"  [ C:\USERS\RADRA\BOX SYNC\SENIOR FALL 2016\ESE 440\Circuit simulation 1\laser sim1-PSpiceFiles\SCHEMAT
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Dbreak          X_M4.DBDMOD     X_M4.DBKMOD     X_M4.DPLCAPMOD  
+          IS   10.000000E-15  985.100000E-15   10.000000E-15    1.000000E-30 
+           N                                                   10            
+          RS     .1             4.910000E-03     .198                        
+          TT                   43.300000E-09                                 
+         CJO  100.000000E-15    2.050000E-09                    1.420000E-09 
+        TRS1                    2.070000E-03   -2.350000E-03                 
+        TRS2                  251.000000E-09   -3.830000E-06                 
+
+
+**** 10/29/16 13:42:47 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim"  [ C:\USERS\RADRA\BOX SYNC\SENIOR FALL 2016\ESE 440\Circuit simulation 1\laser sim1-PSpiceFiles\SCHEMAT
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_M4.MOSMOD     
+               NMOS            
+       LEVEL    1            
+           L    1.000000E-06 
+           W    1.000000E-06 
+         VTO    3.65         
+          KP   35            
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          IS    1.000000E-30 
+          JS    0            
+           N   10            
+          PB     .8          
+        PBSW     .8          
+          CJ    0            
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+         TOX    1            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 10/29/16 13:42:47 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim"  [ C:\USERS\RADRA\BOX SYNC\SENIOR FALL 2016\ESE 440\Circuit simulation 1\laser sim1-PSpiceFiles\SCHEMAT
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_M4.RBKMOD     X_M4.RDSMOD     X_M4.RVTOMOD    
+           R    1               1               1            
+         TC1    1.230000E-03    5.010000E-03   -5.030000E-03 
+         TC2   -2.340000E-06   14.900000E-06   -5.160000E-06 
+
+
+**** 10/29/16 13:42:47 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim"  [ C:\USERS\RADRA\BOX SYNC\SENIOR FALL 2016\ESE 440\Circuit simulation 1\laser sim1-PSpiceFiles\SCHEMAT
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_M4.S1AMOD     X_M4.S1BMOD     X_M4.S2AMOD     X_M4.S2BMOD     
+         RON   10.000000E-06   10.000000E-06   10.000000E-06   10.000000E-06 
+        ROFF     .1              .1              .1              .1          
+         VON   -6.75           -2.5            -2.7             2.3          
+        VOFF   -2.5            -6.75            2.3            -2.7          
+
+
+Starting pseudo-transient algorithm.
+
+WARNING(ORPSIM-16534): Using high values of ITL4 for Speed Level > 0 may increase total simulation job time.
+
+Starting pseudo-transient algorithm.
+
+Starting pseudo-transient algorithm.
+
+Starting pseudo-transient algorithm.
+
+Starting pseudo-transient algorithm.
+
+ERROR -- Convergence problem in DC sweep
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N08113)    5.0000 (N08143)     .7000 (N08201)    3.8351 (N08205)     .7000     
+
+(N08249)     .6953 (X_M4.5)    5.0000 (X_M4.6)    3.8351 (X_M4.7)     .7000     
+
+(X_M4.8)     .7001 (X_M4.9)    3.8351 (X_M4.10)     .7001                       
+
+(X_M4.11)   65.2900                   (X_M4.12)    3.8351                       
+
+(X_M4.13)    3.8351                   (X_M4.14)    5.0000                       
+
+(X_M4.15)    3.8351                   (X_M4.16)    5.0000                       
+
+(X_M4.17)    1.7001                   (X_M4.18)     .7001                       
+
+(X_M4.19)    -.2999                   (X_M4.20)    3.8351                       
+
+(X_M4.21)    4.5131                   
+
+
+  These supply currents failed to converge:
+
+    I(E_U1)                   =   -3.376nA  \   -5.006nA
+    I(X_M4.Eds)               =   -2.330pA  \    5.640nA
+    I(X_M4.Egs)               =   291.04pA  \   -8.324nA
+    I(X_M4.Esg)               =   -4.300pA  \   435.34pA
+    I(X_M4.Evto)              =    3.332nA  \    4.965nA
+    I(X_M4.Lgate)             =    3.376nA  \    5.006nA
+
+**** Interrupt ****
+
+          JOB ABORTED
+
+**** 10/29/16 13:42:47 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim"  [ C:\USERS\RADRA\BOX SYNC\SENIOR FALL 2016\ESE 440\Circuit simulation 1\laser sim1-PSpiceFiles\SCHEMAT
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =      382.06
+

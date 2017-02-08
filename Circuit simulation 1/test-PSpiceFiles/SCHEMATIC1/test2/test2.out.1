@@ -1,0 +1,600 @@
+
+**** 11/01/16 07:53:32 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test2"  [ c:\users\radra\box sync\senior fall 2016\ese 440\circuit simulation 1\test-pspicefiles\schematic1\
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "test2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../test-pspicefiles/test.lib" 
+* From [PSPICE NETLIST] section of C:\Users\radra\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source TEST
+V_V1         N03452 0 5
+V_V2         N05906 0 3
+X_M3         N11102 N12087 N09256 RFP30N06LE/HA
+R_R2         0 N09256  1k TC=0,0 
+D_D1         N03452 N11102 MLED81
+X_U1         N05906 N09256 N03452 0 N12087 uA741
+
+**** RESUMING test2.cir ****
+.END
+
+**** 11/01/16 07:53:32 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test2"  [ c:\users\radra\box sync\senior fall 2016\ese 440\circuit simulation 1\test-pspicefiles\schematic1\
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               MLED81          X_M3.DBDMOD     X_M3.DBKMOD     X_M3.DESD1MOD   
+          IS   10.000000E-09  380.000000E-15   10.000000E-15   10.000000E-15 
+           N    1.1248                                                       
+         ISR   10.010000E-21                                                 
+         IKF   45.752000E-15                                                 
+          BV    5.4169                                         13.54         
+         IBV   10                                                            
+          RS    1.2366           .0112           .182          45.5          
+          TT    5.000000E-09   38.400000E-09                                 
+         CJO   25.000000E-12    1.050000E-09                                 
+          VJ     .75                                                         
+           M     .3333                                                       
+        TRS1                    1.610000E-03    7.500000E-03                 
+        TRS2                    6.080000E-06  -40.000000E-06                 
+
+
+               X_M3.DESD2MOD   X_M3.DPLCAPMOD  X_U1.dx         X_U1.dy         
+          IS   10.000000E-15    1.000000E-30  800.000000E-18  800.000000E-18 
+           N                   10                                            
+          BV   11.46                                                         
+          RS                                    1               1.000000E-03 
+         CJO                  591.000000E-12                   10.000000E-12 
+        TBV1 -757.600000E-06                                                 
+        TBV2   -3.000000E-06                                                 
+
+
+**** 11/01/16 07:53:32 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test2"  [ c:\users\radra\box sync\senior fall 2016\ese 440\circuit simulation 1\test-pspicefiles\schematic1\
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 11/01/16 07:53:32 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test2"  [ c:\users\radra\box sync\senior fall 2016\ese 440\circuit simulation 1\test-pspicefiles\schematic1\
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_M3.MOSMOD     
+               NMOS            
+       LEVEL    1            
+           L    1.000000E-06 
+           W    1.000000E-06 
+         VTO    1.94         
+          KP  139.2          
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          IS    1.000000E-30 
+          JS    0            
+           N   10            
+          PB     .8          
+        PBSW     .8          
+          CJ    0            
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+         TOX    1            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 11/01/16 07:53:32 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test2"  [ c:\users\radra\box sync\senior fall 2016\ese 440\circuit simulation 1\test-pspicefiles\schematic1\
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_M3.RBKMOD     X_M3.RDSMOD     X_M3.RSLVCMOD   X_M3.RVTOMOD    
+           R    1               1               1               1            
+         TC1    1.070000E-03    5.380000E-03    1.750000E-03   -2.150000E-03 
+         TC2 -303.000000E-09   16.400000E-06    3.900000E-06   -5.430000E-06 
+
+
+**** 11/01/16 07:53:32 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test2"  [ c:\users\radra\box sync\senior fall 2016\ese 440\circuit simulation 1\test-pspicefiles\schematic1\
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_M3.S1AMOD     X_M3.S1BMOD     X_M3.S2AMOD     X_M3.S2BMOD     
+         RON   10.000000E-06   10.000000E-06   10.000000E-06   10.000000E-06 
+        ROFF     .1              .1              .1              .1          
+         VON   -4.05           -1.5            -2.2             2.8          
+        VOFF   -1.5            -4.05            2.8            -2.2          
+
+
+**** 11/01/16 07:53:32 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test2"  [ c:\users\radra\box sync\senior fall 2016\ese 440\circuit simulation 1\test-pspicefiles\schematic1\
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N03452)    5.0000 (N05906)    3.0000 (N09256)    3.0000 (N11102)    3.9048     
+
+(N12087)    4.5057 (X_M3.5)    3.9049 (X_M3.6)    4.5057 (X_M3.7)    3.0000     
+
+(X_M3.8)    3.0001 (X_M3.9)    4.5057 (X_U1.6)-191.4E-06 (X_U1.7)    4.5057     
+
+(X_U1.8)    4.5057 (X_U1.9)    0.0000 (X_M3.10)    3.0001                       
+
+(X_M3.11)   78.3690                   (X_M3.12)    4.5057                       
+
+(X_M3.13)    4.5057                   (X_M3.14)    3.9049                       
+
+(X_M3.15)    4.5057                   (X_M3.16)    3.9049                       
+
+(X_M3.17)    4.0001                   (X_M3.18)    3.0001                       
+
+(X_M3.19)    2.0001                   (X_M3.20)    4.5057                       
+
+(X_M3.21)    5.0057                   (X_M3.50)    3.9049                       
+
+(X_M3.51)    3.9049                   (X_M3.91)    3.1254                       
+
+(X_U1.10)    2.3922                   (X_U1.11)    4.9602                       
+
+(X_U1.12)    4.9602                   (X_U1.13)    2.4061                       
+
+(X_U1.14)    2.4061                   (X_U1.53)    4.0000                       
+
+(X_U1.54)    1.0000                   (X_U1.90) 249.8E-06                       
+
+(X_U1.91)   40.0000                   (X_U1.92)  -40.0000                       
+
+(X_U1.99)    2.5000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -3.290E-03
+    V_V2        -7.996E-08
+    X_M3.Vbat   -1.000E+00
+    X_M3.Vto     0.000E+00
+    X_U1.vb     -1.914E-09
+    X_U1.vc     -2.483E-07
+    X_U1.ve      3.370E-12
+    X_U1.vlim    2.498E-07
+    X_U1.vlp    -4.000E-11
+    X_U1.vln    -4.000E-11
+
+    TOTAL POWER DISSIPATION   1.02E+00  WATTS
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+ERROR(ORPSIM-15138): Convergence problem in Transient Analysis at Time =  2.063E-03.
+         Time step =  710.5E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(X_M3.12)                =  -822.31mV  \     4.506V
+    V(X_M3.8)                 =    -2.328V  \     3.000V
+    V(X_M3.15)                =  -822.31mV  \     4.506V
+    V(X_M3.14)                =    -1.423V  \     3.905V
+    V(X_M3.6)                 =  -822.31mV  \     4.506V
+    V(X_M3.7)                 =    -2.328V  \     3.000V
+    V(X_M3.5)                 =    -1.423V  \     3.905V
+    V(X_M3.11)                =     73.06V  \     78.39V
+    V(X_M3.91)                =    -2.203V  \     3.125V
+    V(X_M3.9)                 =  -822.31mV  \     4.506V
+    V(X_M3.10)                =    -2.328V  \     3.000V
+    V(X_M3.17)                =    -1.328V  \     4.000V
+    V(X_M3.18)                =    -2.328V  \     3.000V
+    V(X_M3.13)                =  -822.31mV  \     4.506V
+    V(X_M3.20)                =  -822.31mV  \     4.506V
+    V(X_M3.16)                =    -1.423V  \     3.905V
+    V(X_M3.21)                =  -322.31mV  \     5.006V
+    V(X_M3.50)                =    -1.423V  \     3.905V
+    V(X_M3.51)                =    -1.423V  \     3.905V
+    V(X_M3.19)                =    -3.328V  \     2.000V
+
+  These supply currents failed to converge:
+
+    I(X_M3.Eds)               =   -1.645pA  \     9.86nA
+    I(X_M3.Egs)               =    42.08nA  \    42.38nA
+    I(X_M3.Esg)               =   -14.90nA  \    6.669nA
+    I(X_M3.Evto)              =    64.05nA  \   906.60pA
+    I(X_U1.egnd)              =  -261.48nA  \  -257.95nA
+    I(X_M3.Lgate)             =    5.104nA  \   908.84pA
+    I(X_U1.vc)                =  -254.48nA  \  -248.80nA
+    I(X_U1.ve)                =   -8.386nA  \    65.42pA
+    I(X_U1.vlim)              =   250.30nA  \   249.78nA
+
+  These devices failed to converge:
+    X_M3.Dbody X_M3.Dplcap X_U1.de   
+
+ERROR(ORPSIM-15659): Discontinuing simulation due to convergence problem
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N03452)    5.0000 (N05906)    3.0000 (N09256)    3.0000 (N11102)    3.9048     
+
+(N12087)    4.5057 (X_M3.5)   -1.4232 (X_M3.6)    -.8223 (X_M3.7)   -2.3280     
+
+(X_M3.8)   -2.3280 (X_M3.9)    -.8223 (X_U1.6)-191.4E-06 (X_U1.7)    4.5057     
+
+(X_U1.8)    4.5057 (X_U1.9)    0.0000 (X_M3.10)   -2.3280                       
+
+(X_M3.11)   73.0620                   (X_M3.12)    -.8223                       
+
+(X_M3.13)    -.8223                   (X_M3.14)   -1.4232                       
+
+(X_M3.15)    -.8223                   (X_M3.16)   -1.4233                       
+
+(X_M3.17)   -1.3280                   (X_M3.18)   -2.3280                       
+
+(X_M3.19)   -3.3280                   (X_M3.20)    -.8223                       
+
+(X_M3.21)    -.3223                   (X_M3.50)   -1.4232                       
+
+(X_M3.51)   -1.4232                   (X_M3.91)   -2.2026                       
+
+(X_U1.10)    2.3922                   (X_U1.11)    4.9602                       
+
+(X_U1.12)    4.9602                   (X_U1.13)    2.4061                       
+
+(X_U1.14)    2.4061                   (X_U1.53)    4.0000                       
+
+(X_U1.54)    1.0000                   (X_U1.90) 250.3E-06                       
+
+(X_U1.91)   40.0000                   (X_U1.92)  -40.0000                       
+
+(X_U1.99)    2.5000                   
+
+
+**** Interrupt ****
+**** Param: RELTOL = 0.001
+**** Param: ABSTOL = 1e-012
+**** Param: VNTOL = 1e-006
+**** Param: GMIN = 1e-012
+**** Param: TSTOP = 1
+**** Param: TMAX = 0
+**** Param: ITL1 = 150
+**** Param: ITL2 = 20
+**** Param: ITL4 = 100
+**** Param: AutoConverge = 0
+**** Param: AutoConverge.ITL1 = 1000
+**** Param: AutoConverge.ITL2 = 1000
+**** Param: AutoConverge.ITL4 = 1000
+**** Param: AutoConverge.RELTOL = 0.05
+**** Param: AutoConverge.ABSTOL = 0.001
+**** Param: AutoConverge.VNTOL = 0.001
+**** Param: AutoConverge.PIVTOL = 1e-010
+**** Param: ADVCONV = 1
+**** Param: Current_Simulation = 3
+**** Param: METHOD = 0
+**** Param: TRTOL = 7
+**** Param: STEPGMIN = 0
+**** Param: GMINSTEPS = 0
+**** Param: ITL6 = 0
+**** Param: NOSTEPDEP = 0
+**** Param: PTRANSTEP = 0
+**** Param: GMINSRC = 0
+**** Param: PSEUDOTRAN = 0
+**** Param: NOSTEPSRC = 0
+
+ERROR(ORPSIM-15138): Convergence problem in Transient Analysis at Time =  2.063E-03.
+         Time step =  710.5E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(X_M3.12)                =  -822.31mV  \     4.506V
+    V(X_M3.8)                 =    -2.328V  \     3.000V
+    V(X_M3.15)                =  -822.31mV  \     4.506V
+    V(X_M3.14)                =    -1.423V  \     3.905V
+    V(X_M3.6)                 =  -822.31mV  \     4.506V
+    V(X_M3.7)                 =    -2.328V  \     3.000V
+    V(X_M3.5)                 =    -1.423V  \     3.905V
+    V(X_M3.11)                =     73.06V  \     78.39V
+    V(X_M3.91)                =    -2.203V  \     3.125V
+    V(X_M3.9)                 =  -822.31mV  \     4.506V
+    V(X_M3.10)                =    -2.328V  \     3.000V
+    V(X_M3.17)                =    -1.328V  \     4.000V
+    V(X_M3.18)                =    -2.328V  \     3.000V
+    V(X_M3.13)                =  -822.31mV  \     4.506V
+    V(X_M3.20)                =  -822.31mV  \     4.506V
+    V(X_M3.16)                =    -1.423V  \     3.905V
+    V(X_M3.21)                =  -322.31mV  \     5.006V
+    V(X_M3.50)                =    -1.423V  \     3.905V
+    V(X_M3.51)                =    -1.423V  \     3.905V
+    V(X_M3.19)                =    -3.328V  \     2.000V
+
+  These supply currents failed to converge:
+
+    I(X_M3.Eds)               =   -1.645pA  \     9.86nA
+    I(X_M3.Egs)               =    42.08nA  \    42.38nA
+    I(X_M3.Esg)               =   -14.90nA  \    6.669nA
+    I(X_M3.Evto)              =    64.05nA  \   906.60pA
+    I(X_U1.egnd)              =  -261.48nA  \  -257.95nA
+    I(X_M3.Lgate)             =    5.104nA  \   908.84pA
+    I(X_U1.vc)                =  -254.48nA  \  -248.80nA
+    I(X_U1.ve)                =   -8.386nA  \    65.42pA
+    I(X_U1.vlim)              =   250.30nA  \   249.78nA
+
+  These devices failed to converge:
+    X_M3.Dbody X_M3.Dplcap X_U1.de   
+
+ERROR(ORPSIM-15659): Discontinuing simulation due to convergence problem
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N03452)    5.0000 (N05906)    3.0000 (N09256)    3.0000 (N11102)    3.9048     
+
+(N12087)    4.5057 (X_M3.5)   -1.4232 (X_M3.6)    -.8223 (X_M3.7)   -2.3280     
+
+(X_M3.8)   -2.3280 (X_M3.9)    -.8223 (X_U1.6)-191.4E-06 (X_U1.7)    4.5057     
+
+(X_U1.8)    4.5057 (X_U1.9)    0.0000 (X_M3.10)   -2.3280                       
+
+(X_M3.11)   73.0620                   (X_M3.12)    -.8223                       
+
+(X_M3.13)    -.8223                   (X_M3.14)   -1.4232                       
+
+(X_M3.15)    -.8223                   (X_M3.16)   -1.4233                       
+
+(X_M3.17)   -1.3280                   (X_M3.18)   -2.3280                       
+
+(X_M3.19)   -3.3280                   (X_M3.20)    -.8223                       
+
+(X_M3.21)    -.3223                   (X_M3.50)   -1.4232                       
+
+(X_M3.51)   -1.4232                   (X_M3.91)   -2.2026                       
+
+(X_U1.10)    2.3922                   (X_U1.11)    4.9602                       
+
+(X_U1.12)    4.9602                   (X_U1.13)    2.4061                       
+
+(X_U1.14)    2.4061                   (X_U1.53)    4.0000                       
+
+(X_U1.54)    1.0000                   (X_U1.90) 250.3E-06                       
+
+(X_U1.91)   40.0000                   (X_U1.92)  -40.0000                       
+
+(X_U1.99)    2.5000                   
+
+
+**** Interrupt ****
+**** Param: RELTOL = 0.001
+**** Param: ABSTOL = 1e-012
+**** Param: VNTOL = 1e-006
+**** Param: GMIN = 1e-012
+**** Param: TSTOP = 1
+**** Param: TMAX = 0
+**** Param: ITL1 = 150
+**** Param: ITL2 = 20
+**** Param: ITL4 = 100
+**** Param: AutoConverge = 0
+**** Param: AutoConverge.ITL1 = 1000
+**** Param: AutoConverge.ITL2 = 1000
+**** Param: AutoConverge.ITL4 = 1000
+**** Param: AutoConverge.RELTOL = 0.05
+**** Param: AutoConverge.ABSTOL = 0.001
+**** Param: AutoConverge.VNTOL = 0.001
+**** Param: AutoConverge.PIVTOL = 1e-010
+**** Param: ADVCONV = 1
+**** Param: Current_Simulation = 3
+**** Param: METHOD = 0
+**** Param: TRTOL = 7
+**** Param: STEPGMIN = 0
+**** Param: GMINSTEPS = 0
+**** Param: ITL6 = 0
+**** Param: NOSTEPDEP = 0
+**** Param: PTRANSTEP = 0
+**** Param: GMINSRC = 0
+**** Param: PSEUDOTRAN = 0
+**** Param: NOSTEPSRC = 0
+
+ERROR(ORPSIM-15138): Convergence problem in Transient Analysis at Time =  2.063E-03.
+         Time step =  710.5E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(X_M3.12)                =  -822.31mV  \     4.506V
+    V(X_M3.8)                 =    -2.328V  \     3.000V
+    V(X_M3.15)                =  -822.31mV  \     4.506V
+    V(X_M3.14)                =    -1.423V  \     3.905V
+    V(X_M3.6)                 =  -822.31mV  \     4.506V
+    V(X_M3.7)                 =    -2.328V  \     3.000V
+    V(X_M3.5)                 =    -1.423V  \     3.905V
+    V(X_M3.11)                =     73.06V  \     78.39V
+    V(X_M3.91)                =    -2.203V  \     3.125V
+    V(X_M3.9)                 =  -822.31mV  \     4.506V
+    V(X_M3.10)                =    -2.328V  \     3.000V
+    V(X_M3.17)                =    -1.328V  \     4.000V
+    V(X_M3.18)                =    -2.328V  \     3.000V
+    V(X_M3.13)                =  -822.31mV  \     4.506V
+    V(X_M3.20)                =  -822.31mV  \     4.506V
+    V(X_M3.16)                =    -1.423V  \     3.905V
+    V(X_M3.21)                =  -322.31mV  \     5.006V
+    V(X_M3.50)                =    -1.423V  \     3.905V
+    V(X_M3.51)                =    -1.423V  \     3.905V
+    V(X_M3.19)                =    -3.328V  \     2.000V
+
+  These supply currents failed to converge:
+
+    I(X_M3.Eds)               =   -1.645pA  \     9.86nA
+    I(X_M3.Egs)               =    42.08nA  \    42.38nA
+    I(X_M3.Esg)               =   -14.90nA  \    6.669nA
+    I(X_M3.Evto)              =    64.05nA  \   906.60pA
+    I(X_U1.egnd)              =  -261.48nA  \  -257.95nA
+    I(X_M3.Lgate)             =    5.104nA  \   908.84pA
+    I(X_U1.vc)                =  -254.48nA  \  -248.80nA
+    I(X_U1.ve)                =   -8.386nA  \    65.42pA
+    I(X_U1.vlim)              =   250.30nA  \   249.78nA
+
+  These devices failed to converge:
+    X_M3.Dbody X_M3.Dplcap X_U1.de   
+
+ERROR(ORPSIM-15659): Discontinuing simulation due to convergence problem
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N03452)    5.0000 (N05906)    3.0000 (N09256)    3.0000 (N11102)    3.9048     
+
+(N12087)    4.5057 (X_M3.5)   -1.4232 (X_M3.6)    -.8223 (X_M3.7)   -2.3280     
+
+(X_M3.8)   -2.3280 (X_M3.9)    -.8223 (X_U1.6)-191.4E-06 (X_U1.7)    4.5057     
+
+(X_U1.8)    4.5057 (X_U1.9)    0.0000 (X_M3.10)   -2.3280                       
+
+(X_M3.11)   73.0620                   (X_M3.12)    -.8223                       
+
+(X_M3.13)    -.8223                   (X_M3.14)   -1.4232                       
+
+(X_M3.15)    -.8223                   (X_M3.16)   -1.4233                       
+
+(X_M3.17)   -1.3280                   (X_M3.18)   -2.3280                       
+
+(X_M3.19)   -3.3280                   (X_M3.20)    -.8223                       
+
+(X_M3.21)    -.3223                   (X_M3.50)   -1.4232                       
+
+(X_M3.51)   -1.4232                   (X_M3.91)   -2.2026                       
+
+(X_U1.10)    2.3922                   (X_U1.11)    4.9602                       
+
+(X_U1.12)    4.9602                   (X_U1.13)    2.4061                       
+
+(X_U1.14)    2.4061                   (X_U1.53)    4.0000                       
+
+(X_U1.54)    1.0000                   (X_U1.90) 250.3E-06                       
+
+(X_U1.91)   40.0000                   (X_U1.92)  -40.0000                       
+
+(X_U1.99)    2.5000                   
+
+
+**** Interrupt ****

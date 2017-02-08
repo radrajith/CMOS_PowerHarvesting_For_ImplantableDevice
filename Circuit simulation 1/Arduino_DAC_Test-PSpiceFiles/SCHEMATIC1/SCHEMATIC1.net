@@ -1,0 +1,9 @@
+* source ARDUINO_DAC_TEST
+R_R1         N00612 N00067  10k TC=0,0 
+C_C1         0 N00067  50n  TC=0,0 
+V_V1         N00158 0  
++PULSE 0 5 1ns 1ns 1ns 0.0000192 0.000032
+M_M1         N00158 N00733 N00612 N00612 MbreakN           
+V_V2         N00733 0  
++PULSE 0 5 1ns 1ns 1ns 50ms 100ms
+C_C2         0 N00067  10p  TC=0,0 

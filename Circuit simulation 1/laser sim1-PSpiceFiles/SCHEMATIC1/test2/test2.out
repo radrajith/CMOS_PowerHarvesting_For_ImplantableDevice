@@ -1,0 +1,108 @@
+
+**** 01/17/17 14:06:04 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test2"  [ c:\users\radra\box sync\senior fall 2016\ese 440\circuit simulation 1\laser sim1-PSpiceFiles\SCHEM
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "test2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\radra\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_V2 0 5 .1 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LASER SIM1
+D_D5         N08249 0 Dbreak 
+V_V4         N08113 0 12
+R_R4         N08249 N08205  1 TC=0,0 
+V_V2         N08143 0 0Vdc
+D_D6         N08843 0 Dbreak 
+V_V6         N08707 0 12
+V_Arduino         N08737 0 0Vdc
+X_M6         N08707 N08737 N08843 RFP30N06LE/HA
+X_M7         N08113 N08201 N08205 RFP30N06LE/HA
+X_U1A         N08143 N08205 N08113 0 N08201 LM324
+
+**** RESUMING test2.cir ****
+.END
+
+ERROR -- EVALUATION VERSION analog Node Limit (75 Nodes) Exceeded!
+
+
+
+
+ABORTING SIMULATION
+**** 01/17/17 14:06:04 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test2"  [ c:\users\radra\box sync\senior fall 2016\ese 440\circuit simulation 1\laser sim1-PSpiceFiles\SCHEM
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+Node counts:
+  Top level (NUNODS)                =           8
+  External (NCNODS)                 =          66
+  Total (NUMNOD)                    =          66
+
+Total device count (NUMEL)          =         117
+  Capacitors (C)                    =           8
+  Diodes (D)                        =          17
+  VCVS (E)                          =          13
+  CCCS (F)                          =           3
+  VCCS (G)                          =           2
+  CCVS (H)                          =           1
+  Current Sources (I)               =           3
+  Inductors (L)                     =           6
+  MosFETs (M)                       =           4
+  BJTs (Q)                          =           2
+  Resistors (R)                     =          26
+  VSwitches (S)                     =           8
+  Voltage Sources (V)               =          14
+  ISwitches (W)                     =           4
+
+Number of subcircuits (X)           =           3
+
+Analysis statistics:
+  No. total time points (NUMTTP)    =           0
+  No. rejected time points (NUMRTP) =           0
+  No. iterations (NUMNIT)           =           0
+
+Load Threads                        =           1
+
+Runtime statistics:                       Seconds      Iterations
+  Readin                            =         .02
+  General setup                     =        0.00
+  CMI setup                     =        0.00
+  Setup                             =        0.00
+  DC sweep                          =        0.00               0
+  Bias point                        =        0.00               0
+  AC and noise                      =        0.00               0
+  Total transient analysis          =        0.00
+  Output                            =        0.00
+  Overhead                          =        0.00
+  Total job time                    =         .02
+

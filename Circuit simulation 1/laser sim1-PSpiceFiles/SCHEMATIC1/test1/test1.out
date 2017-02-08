@@ -1,0 +1,208 @@
+
+**** 01/13/17 20:32:57 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test1"  [ c:\users\radra\box sync\senior fall 2016\ese 440\circuit simulation 1\laser sim1-PSpiceFiles\SCHEM
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "test1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\radra\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_Arduino 0 5 .1 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LASER SIM1
+D_D5         N08249 0 Dbreak 
+E_U1         N08201 0 VALUE {LIMIT(V(N08143,N08205)*1E6,-15V,+15V)}
+V_V4         N08113 0 5
+R_R4         N08249 N08205  1 TC=0,0 
+V_V3         N08143 0 0Vdc
+D_D6         N08843 0 Dbreak 
+V_V6         N08707 0 12
+V_Arduino         N08737 0 0Vdc
+X_M6         N08707 N08737 N08843 RFP30N06LE/HA
+X_M7         N08113 N08201 N08205 RFP30N06LE/HA
+
+**** RESUMING test1.cir ****
+.END
+
+**** 01/13/17 20:32:57 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test1"  [ c:\users\radra\box sync\senior fall 2016\ese 440\circuit simulation 1\laser sim1-PSpiceFiles\SCHEM
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Dbreak          X_M6.DBDMOD     X_M6.DBKMOD     X_M6.DESD1MOD   
+          IS   10.000000E-15  380.000000E-15   10.000000E-15   10.000000E-15 
+          BV                                                   13.54         
+          RS     .1              .0112           .182          45.5          
+          TT                   38.400000E-09                                 
+         CJO  100.000000E-15    1.050000E-09                                 
+        TRS1                    1.610000E-03    7.500000E-03                 
+        TRS2                    6.080000E-06  -40.000000E-06                 
+
+
+               X_M6.DESD2MOD   X_M6.DPLCAPMOD  X_M7.DBDMOD     X_M7.DBKMOD     
+          IS   10.000000E-15    1.000000E-30  380.000000E-15   10.000000E-15 
+           N                   10                                            
+          BV   11.46                                                         
+          RS                                     .0112           .182        
+          TT                                   38.400000E-09                 
+         CJO                  591.000000E-12    1.050000E-09                 
+        TBV1 -757.600000E-06                                                 
+        TBV2   -3.000000E-06                                                 
+        TRS1                                    1.610000E-03    7.500000E-03 
+        TRS2                                    6.080000E-06  -40.000000E-06 
+
+
+               X_M7.DESD1MOD   X_M7.DESD2MOD   X_M7.DPLCAPMOD  
+          IS   10.000000E-15   10.000000E-15    1.000000E-30 
+           N                                   10            
+          BV   13.54           11.46                         
+          RS   45.5                                          
+         CJO                                  591.000000E-12 
+        TBV1                 -757.600000E-06                 
+        TBV2                   -3.000000E-06                 
+
+
+**** 01/13/17 20:32:57 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test1"  [ c:\users\radra\box sync\senior fall 2016\ese 440\circuit simulation 1\laser sim1-PSpiceFiles\SCHEM
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_M6.MOSMOD     X_M7.MOSMOD     
+               NMOS            NMOS            
+       LEVEL    1               1            
+           L    1.000000E-06    1.000000E-06 
+           W    1.000000E-06    1.000000E-06 
+         VTO    1.94            1.94         
+          KP  139.2           139.2          
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA    0               0            
+          IS    1.000000E-30    1.000000E-30 
+          JS    0               0            
+           N   10              10            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    0               0            
+        CGDO    0               0            
+        CGBO    0               0            
+         TOX    1               1            
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 01/13/17 20:32:57 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test1"  [ c:\users\radra\box sync\senior fall 2016\ese 440\circuit simulation 1\laser sim1-PSpiceFiles\SCHEM
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_M6.RBKMOD     X_M6.RDSMOD     X_M6.RSLVCMOD   X_M6.RVTOMOD    
+           R    1               1               1               1            
+         TC1    1.070000E-03    5.380000E-03    1.750000E-03   -2.150000E-03 
+         TC2 -303.000000E-09   16.400000E-06    3.900000E-06   -5.430000E-06 
+
+
+               X_M7.RBKMOD     X_M7.RDSMOD     X_M7.RSLVCMOD   X_M7.RVTOMOD    
+           R    1               1               1               1            
+         TC1    1.070000E-03    5.380000E-03    1.750000E-03   -2.150000E-03 
+         TC2 -303.000000E-09   16.400000E-06    3.900000E-06   -5.430000E-06 
+
+
+**** 01/13/17 20:32:57 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test1"  [ c:\users\radra\box sync\senior fall 2016\ese 440\circuit simulation 1\laser sim1-PSpiceFiles\SCHEM
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_M6.S1AMOD     X_M6.S1BMOD     X_M6.S2AMOD     X_M6.S2BMOD     
+         RON   10.000000E-06   10.000000E-06   10.000000E-06   10.000000E-06 
+        ROFF     .1              .1              .1              .1          
+         VON   -4.05           -1.5            -2.2             2.8          
+        VOFF   -1.5            -4.05            2.8            -2.2          
+
+
+               X_M7.S1AMOD     X_M7.S1BMOD     X_M7.S2AMOD     X_M7.S2BMOD     
+         RON   10.000000E-06   10.000000E-06   10.000000E-06   10.000000E-06 
+        ROFF     .1              .1              .1              .1          
+         VON   -4.05           -1.5            -2.2             2.8          
+        VOFF   -1.5            -4.05            2.8            -2.2          
+
+
+
+          JOB CONCLUDED
+
+**** 01/13/17 20:32:57 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test1"  [ c:\users\radra\box sync\senior fall 2016\ese 440\circuit simulation 1\laser sim1-PSpiceFiles\SCHEM
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .06
+

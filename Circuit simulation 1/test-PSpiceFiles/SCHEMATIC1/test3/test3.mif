@@ -1,0 +1,3 @@
+ lib="c:\users\radra\box sync\senior fall 2016\ese 440\circuit simulation 1\test-pspicefiles\test.lib", offset=43, size=44
+ lib=C:\Cadence\SPB_17.2\tools\PSpice\Library\harris.lib, offset=241675, size=2147
+ lib=C:\Cadence\SPB_17.2\tools\PSpice\Library\opamp.lib, offset=36402, size=1868

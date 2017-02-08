@@ -1,0 +1,50 @@
+(ExpressProject "Arduino_DAC_Test"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\arduino_dac_test.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x"))
+  (Folder "Outputs")
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles")
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (MPSSessionName "radrajith")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\USERS\RADRA\BOX SYNC\SENIOR FALL 2016\ESE 440\Circuit simulation 1\arduino_dac_test.dsn")
+      (Path "Design Resources"
+         "C:\USERS\RADRA\BOX SYNC\SENIOR FALL 2016\ESE 440\Circuit simulation 1\arduino_dac_test.dsn"
+         "SCHEMATIC1")
+      (Select "Design Resources"
+         "C:\USERS\RADRA\BOX SYNC\SENIOR FALL 2016\ESE 440\Circuit simulation 1\arduino_dac_test.dsn"
+         "SCHEMATIC1" "PAGE1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 169"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 52 1294 52 387")
+        (Scroll "-112 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\RADRA\BOX SYNC\SENIOR FALL 2016\ESE 440\CIRCUIT SIMULATION 1\ARDUINO_DAC_TEST.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1")))
+  (PartMRUSelector))

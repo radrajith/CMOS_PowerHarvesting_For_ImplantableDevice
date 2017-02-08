@@ -1,0 +1,29 @@
+function [] = power(file, header, repRate, no_row, no_col,startpt, endpt)
+coilV = 2*repRate*; 
+vrect = 3*repRate*2;
+cur = 5*repRate;
+power = [];
+ n = 1;
+for x = 1: 2: repRate*2
+    xval = file(:,x+(coilV));           
+    fSize = size(file(:,x+(coilV)),2);           %size of file
+    voltage = file(:,(x+(coilV)+1)) - file(:,(x+(vrect)+1));
+    current = file(:,(x+(cur)+1));
+    disp(x+(coilV+1)); disp(x+(vrect)+1); disp((x+(cur)+1));
+    yval = voltage.*current;
+    power = [power yval];
+    figure(20);
+    subplot(no_row,no_col, n);
+    loc = strfind(header(n,1),'(');
+    ttle = char(header(n,1));
+    ttle = ttle(loc{1}:size(ttle,2));
+    plot(xval(startpt:1:endpt), yval(startpt:1:endpt));
+    xlabel('time'), ylabel('power'), title(ttle), grid on;
+    n=n+1;
+end
+end
+
+%figure(20);
+    %subplot(no_row,no_col,16);
+ %   plot(xval(startpt:1:endpt), p(startpt:1:endpt));
+ %   xlabel('time'), ylabel('power'), title('power at 2.5'), grid on;
