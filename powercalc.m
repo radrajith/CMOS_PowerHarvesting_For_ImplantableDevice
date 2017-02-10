@@ -42,7 +42,7 @@ for x = 1: 2: avgpower_iterations*2
     %%
     ttle = strcat(ttle, ' [avg power = ', num2str(avgpow), ' W]' );      %avg power display
     plot(xval(startpt:1:endpt), yval(startpt:1:endpt));
-    xlabel('time'), ylabel('Power'), title(ttle,'FontSize',8), grid on;
+    xlabel('time'), ylabel('Power'), title(ttle,'FontSize',6), grid on;
     n=n+1;
     j=j+1;
 end
