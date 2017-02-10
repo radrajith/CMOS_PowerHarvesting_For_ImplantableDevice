@@ -16,7 +16,7 @@ avgpower_iterations = 60;   %when doing a lot of power calc, then this values wi
 repRate = 10;   %what is range used - from 2 to 6 volts every .5 = 9 
 %%
 % To open an excel file you use this command
-
+movFolder = '2_7 - W600uL1uto6u_C1pto10p_2.5V_4M';
 input = xlsread('2.7_W600uL1uto6u_C1pto10p_2.5V_4M.xls');
 file = input(7:size(input,1),1:size(input,2));     %removing first 6 rows bcs its junk
 [~,~,header] = xlsread('header.xls');       %copy all the strings in the file
@@ -38,17 +38,23 @@ for i = 1:1:6
 end;
 legend(temp);
 hold off;
-%% adding headers
-n =1;
-test = [];
-for i=1:2:(size(file,2))
-    test = [test 'time'  header(n,1)];
-    n=n+1;
-end;
+% %% adding headers
+% n =1;
+% test = [];
+% for i=1:2:(size(file,2))
+%     test = [test 'time'  header(n,1)];
+%     n=n+1;
+% end;
     
 
 %% Saving the files to pdf 
-%for i = 1:1: 
-%    print(figure(i),strcat('test',num2str(i)),'pdf');
-%    append_pdfs('testing.pdf',sprintf('avg%d.pdf',i));
-%end
+mkdir(movFolder);
+for i = 1:1:get(gcf,'Number')
+    h=figure(i);
+    set(h,'PaperOrientation','landscape');
+   print(h,strcat('figure',num2str(i)),'-dpdf','-fillpage');
+   movefile(strcat('figure', num2str(i),'.pdf'),strcat('C:\Users\radra\Box Sync\Senior Fall 2016\ESE 440\',movFolder,'\','figure', num2str(i),'.pdf'));  
+   %append_pdfs('testing.pdf',sprintf('avg%d.pdf',i));
+end
+
+close all

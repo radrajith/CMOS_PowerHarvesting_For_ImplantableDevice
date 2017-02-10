@@ -10,12 +10,13 @@
 vripple_location = 1;
 no_row =4;
 no_col =3;
-startpt = 1;
+startpt = 6000;
 endpt = 8000;
-repRate = 60;        %what is range used - from 2 to 6 volts every .5 = 9 
+avgpower_iterations = 60;   %when doing a lot of power calc, then this values will help generate multiple figures
+repRate = 10;   %what is range used - from 2 to 6 volts every .5 = 9 
 %%
 % To open an excel file you use this command
-
+movFolder = '2_7 - W600uL1uto6u_C1pto10p_2.5V_4M';
 input = xlsread('2.7_W600uL1uto6u_C1pto10p_2.5V_4M.xls');
 file = input(7:size(input,1),1:size(input,2));     %removing first 6 rows bcs its junk
 [~,~,header] = xlsread('header.xls');       %copy all the strings in the file
@@ -23,58 +24,35 @@ file = input(7:size(input,1),1:size(input,2));     %removing first 6 rows bcs it
 var = (size(file,2)/2)/repRate;     %number of variables to graph
 %%%%
 %graphDiff(file, header, repRate, no_row, no_col, startpt, endpt);
-vripple = ripple(file,vripple_location, header,repRate, startpt, endpt);
-%graphSame(file, header, repRate, no_row, no_col,startpt, endpt);
-%powercalc(file, header, repRate, no_row, no_col,startpt, endpt);
-%% Saving the files to pdf 
-%for i = 1:1: var
-%    print(figure(i),strcat('test',num2str(i)),'pdf');
-%    append_pdfs('testing.pdf',sprintf('avg%d.pdf',i));
-%end
+vripple = ripple(file,vripple_location, header,avgpower_iterations, startpt, endpt);
+graphSame(file, header, repRate, no_row, no_col,startpt, endpt);
+powercalc(file, header, repRate, no_row, no_col,startpt, endpt, avgpower_iterations);
 
 %% 
-
+figure;
+hold on;
 for i = 1:1:6
-    figure;
     plot(vripple((1+(10*(i-1))):(10*i)));
-    xlabel('cap = 1 to 10 pF'), ylabel('Vripple'), title(strcat('L=',int2str(i),'e-06')), grid on;
-    
+    temp{i} = strcat('L=',int2str(i),'e-06');
+    xlabel('cap = 1 to 10 pF'), ylabel('Vripple'), title('L = 1um to 6um'), grid on;
 end;
-%% adding headers
-n =1;
-test = [];
-for i=1:2:(size(file,2))
-    test = [test 'time'  header(n,1)];
-    n=n+1;
-end;
+legend(temp);
+hold off;
+% %% adding headers
+% n =1;
+% test = [];
+% for i=1:2:(size(file,2))
+%     test = [test 'time'  header(n,1)];
+%     n=n+1;
+% end;
     
-%%%%    power calcualtion
-%{
-coilV = 1*repRate; 
-vrect = 2*repRate;
-cur = 5*repRate;
-xval = file(:,1);
-fSize = size(file,2);
-power = [];
- n = 1;
-for x = 1: 2: repRate*2
-    voltage = file(:,x+(coilV*2+1)) - file(:,x+(vrect*2)+1);
-    current = file(:,(x+(cur*2)+1));
-    disp(x+(coilV*2+1)); disp(x+(vrect*2)+1); disp((x+(cur*2)+1));
-    yval = voltage.*current;
-    power = [power yval];
-    figure(20);
-    subplot(no_row,no_col, n);
-    
-    plot(xval(startpt:1:endpt), yval(startpt:1:endpt));
-    xlabel('time'), ylabel('power'), title(header(n,3)), grid on;
-    n=n+1;
-end
-end
 
-%figure(20);
-    %subplot(no_row,no_col,16);
- %   plot(xval(startpt:1:endpt), p(startpt:1:endpt));
- %   xlabel('time'), ylabel('power'), title('power at 2.5'), grid on;
-%}
+%% Saving the files to pdf 
 
+for i = 1:1:get(gcf,'Number')
+    h=gcf;
+    set(h,'PaperOrientation','landscape');
+   print(h,strcat('..\temp\figure',num2str(i)),'-dpdf','-fillpage');
+   movefile('SVGL_2Yr_Annual.pdf','C:\Thomas Jacobs\Dropbox\Latex\Research\FHLB Advances\SVGL_2Yr_Annual.pdf')  
+   %append_pdfs('testing.pdf',sprintf('avg%d.pdf',i));
+end

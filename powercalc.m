@@ -6,7 +6,7 @@ cur = (2-1)*repRate*2;
 %% 
 power = zeros([repRate 1]);     %storing all the avg power calc
 variable = zeros([repRate 1]);  %storing all the variable values like c=1e-12
-m = get(gcf,'Number');
+m = get(gcf,'Number')+1;
 j = 1;
 n=1;
 for x = 1: 2: avgpower_iterations*2
